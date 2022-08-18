@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" phx-socket={live_socket_path(@conn)}>
-  
+<html lang="en" phx-socket={live_socket_path(@conn)} class="lsb-max-w-full lsb-overflow-hidden lsb-font-inter lsb-text-base lsb-text-gray-600 lsb-bg-white lsb-antialiased lsb-font-feature-default">
+
   <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -16,7 +16,7 @@
     <style><%= raw(makeup_stylesheet(@conn)) %></style>
   </head>
 
-  <body class="wait-for-icons lsb-max-w-full lsb-overflow-hidden lsb-font-inter lsb-text-base lsb-text-gray-600 lsb-bg-white lsb-antialiased lsb-font-feature-default">
+  <body class="wait-for-icons">
     <%= @inner_content %>
   </body>
 
@@ -24,5 +24,5 @@
     <script phx-track-static type="text/javascript" src={application_static_path(@conn, path)}></script>
   <% end %>
   <script><%= raw(render("app.js")) %></script>
-  
+
 </html>
